@@ -1,52 +1,105 @@
-body{
-  margin: 0;
-  padding: 0;
-  background: url('https://media.discordapp.net/attachments/952631599466442752/1073925638219628564/background.png.png') no-repeat;
-  background-size: cover;
+:root {
+        --bg:   #1e1e2e;
+        --fg:   #7f849c;
+        --hl:   #4084d6;
+        --hl2:  #ed4737;
 }
-.box{
-  width: 450px;
-  background: rgba(0, 0, 0, 0.4)
-  padding: 40px;
-  text-align: center;
-  margin: auto;
-  margin-top: 5%;
-  color: white;
-  font-family: 'Century Gothic',sans-serif;
+
+@media (prefers-color-scheme: dark) {
+        :root {
+                --bg:   #1e1e2e;
+                --fg:   #fafafa;
+        }
 }
-.box-img{
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
+
+body {
+        background-color: var(--bg);
+        color: var(--fg);
+        font-size: 1em;
+        font-family: C059, Serif;
+        width: 85%;
+        max-width: 52em;
+        margin: 1em auto;
+        text-align: left;
 }
-.box h1{
-  font-size: 40px;
-  letter-spacing: 4px;
-  font-weight: 100;
+
+p {
+        text-align: justify;
 }
-.box h5{
-  font-size: 20px;
-  letter-spacing: 3px;
-  font-weight: 100;
+
+h1 {
+        font-size: 2.5em;
+        margin: 0.6em 0 0.2em 0;
 }
-.box p{
-  text-align: justify;
+
+a {
+        color: var(--hl);
 }
-ul{
-  margin: 0;
-  padding: 0;
+
+a:hover {
+        color: var(--hl2);
 }
-.box li{
-  display: inline-block;
-  margin: 6px;
-  list-style: none;
+
+img {
+        display: block;
+        margin: auto;
+        max-height: 25em;
+        max-width: 100%;
 }
-.box li a{
-  color: white;
-  text-decoration: none;
-  font-size: 60px;
-  transition: all ease-in-out 250ms;
+
+ul {
+        margin: 0 1em;
+        padding: 0;
 }
-.box li a:hover{
-  color: #b9b9b9;
+
+li {
+        margin: 0.5em 0;
+}
+
+blockquote {
+        font-style: italic;
+}
+
+.columns {
+        columns: 2;
+}
+
+.block {
+        display: inline-block;
+        max-width: 99%;
+}
+
+.buttons {
+        justify-content: center;
+        display: flex;
+        margin: -1em 0;
+}
+
+.buttons img {
+        display: inline-block;
+}
+
+.cutter {
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: monospace;
+        font-size: 1.2em;
+
+        padding: 0.5em 0;
+        border: 1px solid var(--fg);
+        display: inline-block;
+        max-width: 100%;
+        margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+        body {
+                width: 90%;
+                font-size: 1.1em;
+        }
+
+        .columns {
+                columns: 1;
+        }
+
 }
